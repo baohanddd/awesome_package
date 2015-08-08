@@ -13,7 +13,7 @@ HTTP
 
 Guzzle is a PHP HTTP client that makes it easy to send HTTP requests and trivial to integrate with web services.
 
-```
+```php
 $client = new GuzzleHttp\Client();
 $res = $client->get('https://api.github.com/user', ['auth' =>  ['user', 'pass']]);
 echo $res->getStatusCode();
@@ -42,7 +42,7 @@ Storage
 - Insert `zgldh\QiniuStorage\QiniuFilesystemServiceProvider` in `config/app.php`.
 - Add below code in `config/filesystem.php`
 
-```
+```php
 'disks' => [
         ... ,
         'qiniu' => [
@@ -57,7 +57,7 @@ Storage
 
 #### Usage
 
-```
+```php
 use zgldh\QiniuStorage\QiniuStorage;
 
     $disk = QiniuStorage::disk('qiniu');
